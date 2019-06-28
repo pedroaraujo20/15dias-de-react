@@ -1,6 +1,8 @@
 import React from 'react';
 
-const App = () => <h1>Vai 15 dias de React!!!</h1>
+import Square from './components/Square/index.js';
+
+const App = () => <Square />;
 
 export default App;
 
