@@ -4,17 +4,19 @@ import "./styles.css";
 export default class Square extends Component {
     constructor(props) {
         super(props);
-        this.state = {status: "X"};        
+        this.state = {content: "X"};        
     }
 
     handleClick = () => {
-       let state = this.state.status;
-       state === "X" ? this.setState({status: "O"}) : this.setState({status: "X"});       
+       const state = this.state.content;
+       const newState = {};
+       state === "X" ? newState.content = "O" : newState.content = "X"; 
+       this.setState(newState);      
     }
 
     render() {
         return (
-            <button className="square" onClick={this.handleClick}>{this.state.status}</button>
+            <button className="square" onClick={this.handleClick}>{this.state.content}</button>
         );
     }
 }
