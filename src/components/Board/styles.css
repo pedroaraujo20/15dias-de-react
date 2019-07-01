@@ -1,5 +1,5 @@
 * {
-    background-color: #6556dd;
+    background-color: #1f0210;
 }
 
 .board {
@@ -8,7 +8,6 @@
     border: 2px solid #e84393;
     border-radius: 40px;
     padding: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-wrap: wrap;        
+    background-color: #f5dae8;
+    display: inline-block;       
 }
