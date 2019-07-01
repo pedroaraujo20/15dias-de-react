@@ -2,19 +2,21 @@ import React from 'react';
 
 import Square from '../Square/index';
 
-const Board = () => {
+const completeBoard = qtd => {
+    let max = qtd;
+    const squares = [];
+
+    while(max--) {
+        squares.push(<Square />);
+    }
+    return squares;
+}
+
+const Board = ({qtd}) => {
     return (
-        <>
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-        </>       
+        <article>
+            {completeBoard(qtd)}
+        </article>       
     );
 }
 
