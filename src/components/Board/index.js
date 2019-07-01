@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 import Square from '../Square/index';
 
@@ -14,7 +15,7 @@ const completeBoard = qtd => {
 
 const Board = ({qtd}) => {
     return (
-        <article>
+        <article className="board">
             {completeBoard(qtd)}
         </article>       
     );

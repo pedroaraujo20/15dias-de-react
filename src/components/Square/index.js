@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "./styles.css";
 
-const handleClick = texto => () => alert(texto);
+export default class Square extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {status: "X"};        
+    }
 
-const Square = () => (
-    <button className="square" onClick={handleClick("Aeee")}>X</button>
-);
+    handleClick = () => {
+       let state = this.state.status;
+       state === "X" ? this.setState({status: "O"}) : this.setState({status: "X"});       
+    }
 
-export default Square;
+    render() {
+        return (
+            <button className="square" onClick={this.handleClick}>{this.state.status}</button>
+        );
+    }
+}
