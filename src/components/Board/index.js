@@ -7,7 +7,7 @@ const completeBoard = qtd => {
     const squares = [];
 
     while(max--) {
-        squares.push(<Square />);
+        squares.push(<Square key={max}/>);
     }
     return squares;
 }
