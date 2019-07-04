@@ -3,20 +3,16 @@ import './styles.css';
 
 import Square from '../Square/index';
 
-const completeBoard = qtd => {
-    let max = qtd;
-    const squares = [];
+const createSquares = () => {
+    const squares = Array(9).fill();
 
-    while(max--) {
-        squares.push(<Square key={max}/>);
-    }
-    return squares;
+    return squares.map(() => <Square />)
 }
 
-const Board = ({qtd}) => {
+const Board = () => {
     return (
         <article className="board">
-            {completeBoard(qtd)}
+            {createSquares()}
         </article>       
     );
 }

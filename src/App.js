@@ -8,7 +8,7 @@ const App = () => {
     return (
         <GameWrapper>
             <NextPlayer />
-            <Board qtd="9"/>            
+            <Board />            
         </GameWrapper>
     );
 }
