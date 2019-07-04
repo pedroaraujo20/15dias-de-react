@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './styles.css';
 
 import Square from '../Square/index';
 
-const createSquares = () => {
-    const squares = Array(9).fill();
+class Board extends Component {      
 
-    return squares.map(() => <Square />)
-}
-
-const Board = () => {
-    return (
-        <article className="board">
-            {createSquares()}
-        </article>       
-    );
-}
+    createSquares = () => {
+        const squares = Array(9).fill();
+    
+        return squares.map(
+            (square, index) => (
+            <Square key={index}
+            onClick={this.props.onClick}
+            />
+        )
+      );  
+    }
+    render ()  {
+        return (
+            <article className="board">
+                {this.createSquares()}
+            </article>       
+        )
+    };
+};
 
 export default Board;
