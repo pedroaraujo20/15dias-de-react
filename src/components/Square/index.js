@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import "./styles.css";
 
-export default class Square extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {content: "X"};        
-    }
+class Square extends Component {
+    state = {content: ""};        
+    
 
     handleClick = () => {
        const state = this.state.content;
@@ -20,3 +18,5 @@ export default class Square extends Component {
         );
     }
 }
+
+export default Square;

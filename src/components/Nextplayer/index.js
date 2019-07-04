@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component }from 'react';
 import './styles.css';
 
-const Nextplayer = () => {
-    return (
-        <p className="next">Next player: X</p>
-    );
-}
+class Nextplayer extends Component {
+    state = { content: "" }
+    render () {
+        return (
+            <p className="next">Next player: {this.state.content}</p>
+        ); 
+    }
+} 
 
 export default Nextplayer;
